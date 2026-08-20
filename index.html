@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>This Is The Day | New Visions</title>
+    <meta name="robots" content="noindex,follow">
+    <link rel="canonical" href="https://www.ournewvisions.com/films">
+    <link rel="preconnect" href="https://www.ournewvisions.com">
+    <style>
+      html,
+      body {
+        background: #000;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .fallback {
+        align-items: center;
+        box-sizing: border-box;
+        color: #f5f5f5;
+        display: flex;
+        font: 16px/1.5 system-ui, sans-serif;
+        inset: 0;
+        justify-content: center;
+        padding: 2rem;
+        position: fixed;
+        text-align: center;
+      }
+
+      .fallback a { color: inherit; }
+
+      iframe {
+        background: #000;
+        border: 0;
+        height: 100%;
+        inset: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fallback">
+      <p>Loading New Visions Films.<br><a href="https://www.ournewvisions.com/films">Open the page directly</a>.</p>
+    </div>
+    <iframe
+      id="films"
+      src="https://www.ournewvisions.com/films"
+      title="New Visions Films"
+      allow="fullscreen"
+      loading="eager"
+      referrerpolicy="strict-origin-when-cross-origin"
+    ></iframe>
+    <script>
+      document.getElementById("films").src =
+        "https://www.ournewvisions.com/films" + window.location.search + window.location.hash;
+    </script>
+    <noscript><p><a href="https://www.ournewvisions.com/films">Open New Visions Films</a>.</p></noscript>
+  </body>
+</html>
